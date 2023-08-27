@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // function okk(a,b){
+  //     let c=b
+  //     let d=a
+  //     return a=c
+  // }
+  // console.log(okk(10,20))
+  // // console.log(window.a)
+
+  // let str ="my name kjbhkjnklis shivam"
+  // const largestWord=(str)=>{
+  //     let splitedStr=str.split(" ")
+  //     let world=""
+  //     let arr=[]
+  //     for (let i = 0; i < splitedStr.length; i++) {
+  //         if(splitedStr[i].length>world.length){
+  //             world=splitedStr[i]
+  //         }
+  //     }
+  //     return world
+  // }
+  // console.log(largestWord(str))
+
+  //  a=5
+  //  console.log(a)
+  //  const a
+
+  const pipe =
+      (...ops) =>
+      (x) =>
+        ops.reduce((acc, op) => op(acc), x),
+    op1 = (a) => a ** 2,
+    op2 = (b) => b + 2,
+    op3 = (c) => c * 5;
+
+  console.log(pipe(op1, op2, op3)(2));
+
+  // this is method of infinite function curring
+  // the value of x is 2
+  // and through reduce we are returning the output of previous one and
+  // giving the output to the next function as acc
+</script>

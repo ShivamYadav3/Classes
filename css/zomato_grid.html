@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    .container {
+      display: grid;
+      width: 900px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+    }
+    .img {
+      border-radius: 5px;
+    }
+    .main {
+      height: 305px;
+      width: 230px;
+      margin: 10px;
+      border: 1px solid silver;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .image {
+      height: 150px;
+      width: 230px;
+    }
+    .name {
+      height: 25px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 17px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+    .sub_name {
+      height: 20px;
+      font-weight: 50;
+      font-size: 15px;
+      color: rgb(62, 61, 88);
+    }
+    .rate {
+      display: flex;
+      font-weight: 50;
+      font-size: 15px;
+      justify-content: space-between;
+      color: rgb(62, 61, 88);
+      height: 30px;
+      margin-top: 10px;
+    }
+    .star {
+      height: 20px;
+      width: 25px;
+    }
+    .discont {
+      display: flex;
+      height: 30px;
+      font-size: 14px;
+      border: 1px solid rgba(115, 138, 73, 0.246);
+      border-left: none;
+      border-right: none;
+      padding-top: 12px;
+    }
+    .offer {
+      margin-left: 45px;
+    }
+    .quick_view {
+      text-align: center;
+      margin-top: 10px;
+      color: white;
+    }
+    .main:hover .quick_view {
+      color: blue;
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center; font-size: 45px; color: brown">
+      Card's Using Grid
+    </h1>
+    <div class="container">
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+      <div class="main">
+        <div class="image">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+            height="150px"
+            width="230px"
+            alt=""
+          />
+        </div>
+        <div class="name">TIKKA PAAJI</div>
+        <div class="sub_name">kebabs, Snacks</div>
+        <div class="rate">
+          <div class="star">
+            <i class="fa fa-star" aria-hidden="true"><span>--</span></i>
+          </div>
+          <div>.</div>
+          <div class="time">40 MINS</div>
+          <div>.</div>
+          <div class="price">200 FOR TWO</div>
+        </div>
+        <div class="discont">
+          <div class="icon">
+            <i class="fa fa-percent" aria-hidden="true"></i>_
+          </div>
+          <div class="offer">50% off | Use WELCOME50</div>
+        </div>
+        <div class="quick_view">QUICK VIEW</div>
+      </div>
+    </div>
+  </body>
+</html>

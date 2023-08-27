@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: aqua;
+    }
+    .box1, .box2, .box3, .box4, .box5{
+        display: none;
+    }
+    @media (min-width: 320px) and (max-width: 480px){
+        .box{
+            background-color: beige;
+        }
+        .box1{
+            display: block;
+            background-color: blanchedalmond;
+            font-size: 12px;
+        }
+    }
+    @media (min-width: 481px) and (max-width: 720px){
+        .box{
+            background-color: rgb(238, 238, 138);
+        }
+        .box2{
+            display: block;
+            background-color: rgb(211, 201, 88);
+            font-size: 14px;
+        }
+    }
+    @media (min-width: 721px) and (max-width: 1024px){
+        .box{
+            background-color: rgb(214, 214, 102);
+        }
+        .box3{
+            display: block;
+            background-color: rgb(205, 255, 240);
+            font-size: 16px;
+        }
+    }
+    @media (min-width: 1025px) and (max-width: 1200px){
+        .box{
+            background-color: rgb(220, 230, 245);
+        }
+        .box4{
+            display: block;
+            background-color: rgb(46, 212, 24);
+            font-size: 18px;
+        }
+    }
+    @media (min-width: 1201px){
+        .box{
+            background-color: rgb(19, 93, 78);
+        }
+        .box5{
+            display: block;
+            background-color: rgb(34, 220, 56);
+            font-size: 20px;
+        }
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="box1">This is Box 1</div>
+        <div class="box2">This is Box 2</div>
+        <div class="box3">This is Box 3</div>
+        <div class="box4">This is Box 4</div>
+        <div class="box5">This is Box 5</div>
+    </div>
+</body>
+</html>

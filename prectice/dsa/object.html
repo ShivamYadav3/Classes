@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const arr = [
+    { prodA: ["bike", "scooter"], prodB: "itemA" },
+    { prodA: ["utensils", "washing machine"], prodB: "itemB" },
+    { prodA: ["car", "train"], prodB: "itemA" },
+    { prodA: ["sofa-set", "clothes"], prodB: "itemB" },
+  ];
+  // answer should be like this-
+  const output = [
+    { prodA: ["bike", "scooter", "car", "train"], prodB: "itemA" },
+    {
+      prodA: ["utensils", "washing machine", "sofa-set", "clothes"],
+      prodB: "itemB",
+    },
+  ];
+  const arr2 = [];
+  const obj2 = {};
+  for (let i = 0; i < arr.length; i++) {
+    const current = arr[i];
+    if (obj2.hasOwnProperty(current.prodB)) {
+      continue;
+    }
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i].prodB === arr[j].prodB) {
+        current.prodA = [...current.prodA, ...arr[j].prodA];
+        // or
+        // current.prodA=current.prodA.concat(arr[j].prodA)
+      }
+    }
+    obj2[current.prodB] = true;
+    arr2.push(current)
+  }
+  console.log(arr2)
+</script>
+

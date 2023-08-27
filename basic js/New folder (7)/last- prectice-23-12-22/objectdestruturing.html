@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//     var employee = {    // Object we want to destructure
+//     firstname: 'Jon',
+//     lastname: 'Snow',
+//     dateofbirth: '1990'
+// };
+
+// // Destructuring the object into our variables
+// var { firstname, lastname, dateofbirth } = employee;
+// console.log( firstname, lastname, dateofbirth);
+// console.log( employee);
+
+// var employee = {    // Object we want to destructure
+//     firstname: 'Jon',
+//     lastname: 'Snow',
+//     dateofbirth: '1990'
+// };
+
+// // Destructuring the object into variables with
+// // different names than the object variables
+// var { firstname: fn, lastname: ln, dateofbirth: dob } = employee;
+// console.log( fn, ln, dob);
+// console.log( employee);
+
+
+var employee = {    // Object we want to destructure
+    firstname: 'Jon',
+    lastname: 'Snow',
+    dateofbirth: '1990'
+};
+
+// Destructuring the object into variables without 
+// assigning default values 
+var { firstname, lastname, country ="okk"} = employee;
+console.log("Without setting default values")
+console.log( firstname, lastname, country);
+
+// Destructuring the object into variables by 
+// assigning default values 
+var { firstname = 'default firstname', 
+      lastname = 'default lastname', 
+      country = 'default country' } = employee;
+console.log("\n After setting default values")
+console.log( firstname, lastname, country);
+
+
+
+//     let fruit = prompt("Which fruit to buy?", "apple");
+
+// let bag = {
+//   [fruit]: 5, // the name of the property is taken from the variable fruit
+// };
+// console.log(bag)
+
+// alert( bag.apple ); // 5 if fruit="apple"
+</script>
+<!-- @media (min-width:420px) and ( max-width:800px) {
+    .container{
+        background-color: rgb(178, 233, 25);
+    }
+}
+@media (min-width:801px) and ( max-width:1020px) {
+    .container{
+        background-color: rgb(137, 57, 57);
+    }
+}
+@media (min-width:1300px){
+    .container{
+        background-color: rgb(232, 0, 0);
+    }
+}
+@media( max-width:420px) {
+    .container{
+        background-color: rgb(0, 0, 0);
+        color: azure;
+    }
+} -->

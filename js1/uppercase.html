@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- split
+    make a function to array length and a condition to change
+    the first letter to uppercase through loop -->
+    <!-- 
+    technical
+    /**
+ * @description - {Method to convert string into capitalise}
+ * 
+ * Step 1 - Take user input , define a variable
+ * Step 2 - Split the input into an arr using space
+ * Step 3 - Iterate the splitted array
+ * Step 4 - Get the first charater & convert into uppercase
+ * Step 5 - Get the rest character & convert into lower case
+ * Step 6 - Join 5 & 6 & append into result => result = result + fChar + rChar + " "
+ * Step 7 - Return the result
+ */  -->
+  </body>
+</html>
+<script>
+  // function okk(text){
+  let text = "hello everyonE, my name is shiVam yaDav, i'm fRom JabalpuR";
+  let text1 = text.split(" ");
+  let final;
+  let okk;
+  // console.log("1-  ",text1);
+  for (let i = 0; i < text1.length; i++) {
+    // console.log("2-  ",text1[i]);
+    // console.log("3-  ", text1[i][0].toUpperCase())
+    // // final=text1[i]
+    // console.log("4-  ", text1[i].slice(1));
+    // //  okk[i]=text1[i][0].toUpperCase();
+    // //  final=text1[i].slice(1);
+    // //  text1[i]=text1[i].toUpperCase()
+    //  console.log("5-  ", text1[i][0].toUpperCase()+text1[i].slice(1));
+    text1[i] = text1[i][0].toUpperCase() + text1[i].slice(1).toLowerCase();
+  }
+  let ah = text1.join(" ");
+  console.log("OutPut-  ", ah);
+</script>

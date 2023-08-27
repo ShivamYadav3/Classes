@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            background-color: rgb(255, 223, 183);
+            height: 100vh;
+            width: 100vw;
+        }
+        .okk{
+            height: 31px;
+            display: flex;
+            gap: 14px;
+            padding-left: 14px;
+        }
+        .bookmarks{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-weight: 100;
+            font-size: 12px;
+            gap: 5px;
+            text-decoration: none;
+            color: black;
+        
+        }
+        .bicon{
+            align-items: center;
+            height: 100%;
+            display: flex;
+        }
+        .btext{
+            
+            align-items: center;
+        }
+        .header{
+            height: 48px;
+            padding: 8px;
+            border-top: 1px solid rgb(241, 171, 171);
+            display: flex;
+        }
+        .blank{
+            width: 1136px;
+            height: 100%;
+        }
+        .nav{
+            width: 200px;
+            height: 100%;
+            display: flex;
+        }
+        .gmim{
+            display: flex;
+            width: 140px;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+        }
+        .gmim:hover{
+            text-decoration: underline;
+        }
+        .icon{
+            display: flex;
+            width: 100px;
+            align-items: center;
+            /* padding-left: 10px; */
+            justify-content: space-evenly;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .logobox{
+            width: 272px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: 52px;
+            font-family:  sans-serif;
+        }
+        .logo{
+            width: 272px;
+            height: 92px;
+            color: rgb(255 165 52);
+            font-size: 92px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 44px;
+            width: 561px;
+            border-radius: 30px;
+            border-color: #fff;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        .search-box{
+            width: 493px;
+            height: 44px;
+            border-radius: 30px;
+            border: none;
+            font-family: inherit;
+            padding-inline-start: 21px;
+            outline: none;
+            font-size: 16px;
+            padding-inline-end: 44px;
+        }
+        .shortcut{
+            width: 577px;
+            font-size: 14px;
+            font-weight: 100;
+            /* height: 228px; */
+            /* display: flex; */
+        }
+        .sd:hover{
+            background-color: rgb(155, 182, 155);
+            border-radius: 10px;
+        }
+        .sd{
+            width: 112px;
+            height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; 
+            gap: 10px;
+        }
+        .sd1{
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:  rgb(255 184 95);
+            border-radius: 44px;
+        }
+        .sd2{
+            width: 104px;
+            height: 36px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer{
+            color: blueviolet;
+            width: 170px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            font-size: 15px;
+            border-color: #fff;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="okk">
+            <a href="https://mail.google.com/mail/u/1/#inbox" class="bookmarks">
+            <div class="bookmarks">
+                <div class="bicon"><img src="https://img.icons8.com/color/48/000000/gmail-new.png" width="16px"/></div>
+                <div class="btext">Gmail</div>
+            </div></a>
+            <a href="https://www.youtube.com/" class="bookmarks">
+            <div class="bookmarks">
+                <div class="bicon"><img src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" alt="" width="25px"></div>
+                <div class="btext">You Tube</div>
+            </div></a>
+            <a href="https://www.google.com/maps" class="bookmarks">
+            <div class="bookmarks">
+                <div class="bicon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Google_Maps_icon_%282015-2020%29.svg/2048px-Google_Maps_icon_%282015-2020%29.svg.png" alt="" width="13px"></div>
+                <div class="btext">Maps</div>
+            </div></a>
+            <a href="https://www.tradingview.com/" class="bookmarks">
+            <div class="bookmarks">
+                <div class="bicon"><img src="https://s3.tradingview.com/userpics/6171439-Hlns_orig.png" alt="" width="16px"></div>
+                <div class="btext">TradingView - Track...</div>
+            </div></a>
+            <a href="https://www.linkedin.com/feed/" class="bookmarks">
+            <div class="bookmarks">
+                <div class="bicon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="" width="14px"></div>
+                <div class="btext">(87) Feed | Linkdin</div>
+            </div></a>
+            <a href="https://www.naukri.com/nlogin/login?URL=http://www.naukri.com/mnjuser/homepage" class="bookmarks">
+            <div class="bookmarks">
+                <div class="bicon"><img src="https://static.naukri.com/s/4/100/i/naukriLogoIcon200.png" alt="" width="24px"></div>
+                <div class="btext">Home | Mynaukri</div>
+            </div></a>
+        </div>
+        <div class="header">
+            <div class="blank"></div>
+            <div class="nav">
+                <div class="gmim">
+                    <div>Gmail</div>
+                    <div>Images</div>
+                </div>
+                <div class="icon">
+                    <div style="padding-top: 10px;"><svg class="gb_Ve" focusable="false" viewBox="0 0 24 24" width="24px"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></div>
+                    <div style="padding-top: 10px;"><img src="https://img.icons8.com/ultraviolet/40/000000/test-account.png" width="25px"/></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="logobox">
+                <div class="logo">Google</div>
+            </div>
+            <div class="box" style="display: flex;">
+                <div style="padding-top: 12px; padding-left:18px"><i class="fa fa-search" aria-hidden="true"></i></div>
+                <div><input type="search" placeholder="Search Google or type a URL" class="search-box"></div>
+                <div style="padding-top: 13px;"><i class="fa fa-microphone" aria-hidden="true"></i></div>
+            </div>
+            <div class="shortcut">
+                <div style="display: flex; justify-content: center;">
+                <a href="https://web.whatsapp.com/" class="sd">
+                    <div class="sd1"><img src="https://seeklogo.com/images/W/whatsapp-icon-logo-6E793ACECD-seeklogo.com.png" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">(6) Whatsapp</div>
+                </a>
+                <a href="https://meet.google.com/" class="sd">
+                    <div class="sd1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFy4-AFhlEt8bFt_70WR5fvTU_CFdg7oNT-z9aNneX&s" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">Google Meet</div>
+                </a>
+                <a href="https://www.youtube.com/" class="sd">
+                    <div class="sd1"><img src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" alt="" width="25px" height="24px"></div>
+                    <div class="sd2">YouTube</div>
+                </a>
+                <a href="https://app.diagrams.net/" class="sd">
+                    <div class="sd1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/2048px-Diagrams.net_Logo.svg.png" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">diagrams.net</div>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="sd">
+                    <div class="sd1"><img src="https://img.icons8.com/color/48/000000/gmail-new.png" width="16px" height="16px"></div>
+                    <div class="sd2">Inbox(3205)</div>
+                </a></div>
+                <div style="display: flex; justify-content: center;">
+                <a href="https://drive.google.com/drive/u/0/my-drive" class="sd">
+                    <div class="sd1"><img src="data:image/png;base64,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" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">My Drive</div>
+                </a>    
+                <a href="https://fontawesome.com/v4/icons/" class="sd">
+                    <div class="sd1"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1424864386/s8fnxct2dnzndephn7k3.png" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">Font Aweso</div>
+                </a>
+                <a href="https://github.com/" class="sd">
+                    <div class="sd1"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">github</div>
+                </a>
+                <a href="https://www.instagram.com/" class="sd">
+                    <div class="sd1"><img src="https://www.pngplay.com/wp-content/uploads/1/Round-Instagram-Logo-PNG-HD-Quality.png" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">insta</div>
+                </a>
+                <a href="" class="sd">
+                    <div class="sd1"><img src="add.png" alt="" width="24px" height="24px"></div>
+                    <div class="sd2">Add Shortcut</div>
+                </a>
+            </div>
+
+            </div>
+        </div>
+        <div style="display: flex; justify-content:flex-end ; margin-right: 15px;">
+            <div class="footer">Custmomize Chrome</div>
+        </div>
+    </div>
+</body>
+</html>

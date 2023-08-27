@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  var input = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16],
+  ];
+  let arr=[]
+  const spiral=(input)=>{
+    
+    arr.push(input.shift())
+
+    for(let i=0;i<input.length;i++){
+        arr.push(input[i].pop())
+    }
+
+    arr.push(input.pop().reverse())
+
+    for(let i=input.length-1;i>=0;i--){
+        arr.push(input[i].shift())
+    }
+
+    if(input.length>0){
+        return spiral(input)
+    }
+    return arr.flat()
+  }
+  
+  console.log(spiral(input))
+
+  // Output -> Hint - Sprial in clockwise order
+  // [1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10];
+</script>

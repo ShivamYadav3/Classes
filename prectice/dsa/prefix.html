@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // To find longest common string from array of strings
+
+  let arr = ["go", "google", "gosh"];
+  const check = (arr) => {
+    for (let i = 0; i < arr[0].length; i++) {
+      for (let j = 1; j < arr.length; j++) {
+        if (arr[0][i] !== arr[j][i]) {
+          return arr[0].slice(0, i);
+        }
+      }
+    }
+    return arr[0]
+  };
+  console.log(check(arr));
+</script>

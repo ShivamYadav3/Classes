@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        height: 100vh;
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* align-self: center; */
+        text-align: center;
+        
+        gap: 10px;
+        /* vertical-align: middle; */
+    }
+    .box{
+        /* width: 200px; */
+        /* height: 150px; */
+        background-color: aqua;
+    }
+    .box1{
+        background-color: rgb(131, 120, 120);
+        grid-column: span 2;
+    }
+    .box2{
+        background-color: rgb(205, 233, 154);
+        grid-row: span 2;
+    }
+   .box3{
+        background-color: rgb(235, 134, 131);
+        grid-row: 1/ 3
+    }
+    .box4{
+        background-color: rgb(105, 75, 83);
+        grid-column: 1/3;
+    }
+    .box5{
+        background-color: rgb(221, 108, 125);
+        grid-column: 2/4;
+    }
+    .box6{
+        background-color: rgb(72, 52, 189);
+        order: -1;
+    }
+    .box7{
+        background-color: rgba(48, 215, 90, 0.897);
+    }
+    .box8{
+        background-color: rgb(137, 165, 145);
+        order: 1;
+    }
+    .box9{
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+        grid-area: 7/2/10/5;
+    } 
+    .box11{
+        background-color: rgb(191, 29, 29);
+    }
+    .box12{
+        background-color: rgb(220, 183, 183);
+        /* grid-row: 2/3;
+        grid-column: 2/3; */
+        grid-area: 2/2/3/3;
+    }  
+    .box13{
+        background-color: rgba(48, 215, 90, 0.897);
+    }
+    .box14{
+        background-color: rgb(137, 165, 145);
+    }
+    .box15{
+        background-color: rgb(74, 5, 5);
+        color:white;
+    } 
+</style>
+<body>
+    <div class="container">
+        <div class="box box1">hello shivam 1</div>
+        <div class="box box2">hello shivam 2</div>
+        <div class="box box3">hello shivam 3</div>
+        <div class="box box4">hello shivam 4</div>
+        <div class="box box5">hello shivam 5</div>
+        <div class="box box6">hello shivam 6</div>
+        <div class="box box7">hello shivam 7</div>
+        <div class="box box8">hello shivam 8</div>
+        <div class="box box9">hello shivam 9</div>
+        <div class="box box10">hello shivam 10</div>
+        <div class="box box11">hello shivam 11</div>
+        <div class="box box12">hello shivam 12</div>
+        <div class="box box13">hello shivam 13</div>
+        <div class="box box14">hello shivam 14</div>
+        <div class="box box15">hello shivam 15</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   let arr = [2, 7, 11, 4, -2]; //  output = [20,15,11,18,24]
+  //   const makeArr = (arr) => {
+  //     const newArr = [];
+  //     let total = 0;
+  //     for (let j = 0; j < arr.length; j++) {
+  //       total += arr[j];
+  //     }
+  //     for (let i = 0; i < arr.length; i++) {
+  //       newArr[i] = total - arr[i];
+  //     }
+  //     return console.log(newArr);
+  //   };
+  //   makeArr(arr);
+
+  let arr = [
+    { name: "shankar", place: "jabalpur" },
+    { name: "gaurav", place: "bhopal" },
+    { name: "shivam", place: "jabalpur" },
+    { name: "ram", place: "bhopal" },
+    { name: "aakash", place: "jabalpur" },
+  ];
+  //   let output = [
+  //     { place: "jabalpur", name: ["shankar", "shivam", "aakash"], count: 3 },
+  //   ];
+  // let out=[]
+  // let PlaceObj={}
+  //   for(let i=0;i<arr.length;i++){
+  //     if(PlaceObj.hasOwnProperty(arr[i].place)){
+  //         arr[i].count++
+  //     }
+  //     else{out.push({...arr[i],count:1})
+  //      PlaceObj[arr[i].place]=true}
+  //   }
+  //   console.log(out)
+
+  function shn(place) {
+    let nameBox = [];
+    let count;
+    let opration = arr.map((data) => {
+      if (data.place === place) {
+        nameBox.push(data.name);
+        count = nameBox.length;
+      }
+      return nameBox;
+    });
+
+    console.log({ place, nameBox, count });
+  }
+
+  shn("bhopal");
+</script>

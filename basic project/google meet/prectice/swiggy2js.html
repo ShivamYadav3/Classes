@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Through JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+        let a=document.createElement("div")
+        a.style.width="250px"
+        a.style.height="322px"
+        a.style.border="1px solid white"
+        document.body.append(a)
+        let b=document.createElement("div")
+        b.style.width="230px"
+        b.style.height="300px"
+        // b.style.border="1px solid black"
+        b.style.margin="10px"
+        a.append(b)
+        let c=document.createElement("div")
+        c.style.width="230px"
+        c.style.height="150px"
+        // c.style.border="1px solid black"
+        let photo=document.createElement("img")
+        photo.src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tylcvoulgaobuiqe3wne"
+        photo.style.width="230px"
+        photo.style.height="150px"
+        c.append(photo)
+        b.append(c)
+        let d=document.createElement("div")
+        d.style.width="230px"
+        d.style.height="25px"
+        // d.style.border="1px solid red"
+        d.style.fontSize="17px"
+        d.style.fontWeight="500"
+        d.style.fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+        let p=document.createTextNode
+        p="TIKKA PAAJI"
+        d.append(p)
+        b.append(d)
+        let e=document.createElement("div")
+        e.style.width="230px"
+        e.style.height="20px"
+        // e.style.border="1px solid blue"
+        e.style.fontSize="15px"
+        e.style.fontWeight="50"
+        e.style.color="rgb(62, 61, 88)"
+        let q=document.createTextNode
+        q="kebabs, Snacks"
+        e.append(q)
+        b.append(e)
+        let f=document.createElement("div")
+        f.style.width="230px"
+        f.style.height="30px"
+        // f.style.border="1px solid green"
+        f.style.display="flex"
+        f.style.justifyContent="space-between"
+        f.style.marginTop="10px"
+        f.style.fontSize="15px"
+        f.style.fontWeight="50"
+        f.style.color="rgb(62, 61, 88)"
+        let f1=document.createElement("div")
+        f1.innerHTML='<i class="fa fa-star" aria-hidden="true"></i>'
+        let ok=document.createElement("span")
+        ok.innerText="--"
+        f1.append(ok)
+        let f2=document.createElement("div")
+        let t1=document.createTextNode
+        t1="."
+        f2.append(t1)
+        let f3=document.createElement("div")
+        let t2=document.createTextNode
+        t2="40 MINS"
+        f3.append(t2)
+        let f4=document.createElement("div")
+        let t3=document.createTextNode
+        t3="."
+        f4.append(t3)
+        let f5=document.createElement("div")
+        let t4=document.createTextNode
+        t4="200 FOR TWO"
+        f5.append(t4)
+        f.append(f1,f2,f3,f4,f5)
+        b.append(f)
+        let g=document.createElement("div")
+        g.style.width="230px"
+        g.style.height="30px"
+        g.style.border="1px solid rgba(115, 138, 73, 0.246)"
+        g.style.display="flex"
+        g.style.fontSize="14px"
+        g.style.paddingTop="12px"
+        g.style.borderLeft="none"
+        g.style.borderRight="none"
+        let g1=document.createElement("div")
+        g1.innerHTML='<i class="fa fa-percent" aria-hidden="true"></i>_'
+        let g2=document.createElement("div")
+        g2.innerText="50% off | Use WELCOME50"
+        g2.style.marginLeft="10px"
+        g.append(g1,g2)
+        b.append(g)
+        let h=document.createElement("div")
+        h.style.width="230px"
+        h.style.height="30px"
+        // h.style.border="1px solid black"
+        h.innerText="QUICK VIEW"
+        h.style.color="black"
+        h.style.textAlign="center"
+        h.style.marginTop="10px"
+        b.append(h)
+    </script>
+</body>
+</html>

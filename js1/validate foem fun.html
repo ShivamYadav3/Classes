@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>document</title>
+  </head>
+  <body>
+    <h1>this is heading</h1>
+    <p>this is pera</p>
+    <span id="main">this is span</span>
+    <button>try now</button>
+    <form action="" name="myForm" onsubmit="validateForm()">
+      name: <input type="text" name="fname" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    document.querySelector("#main").style.color = "red";
+    function validateForm() {
+      console.log("inside form");
+      if (document.forms.myForm.fname.value) {
+        alert("entered");
+      } else {
+        alert("Enter something");
+      }
+    }
+    var para = document.createElement("p");
+
+    para.innerHTML = "hey I am dynamically generated tag";
+    var paraText = document.createTextNode("hey I am dynamically akash");
+    para.appendChild(paraText);
+
+    document.body.append(para);
+  </script>
+</html>

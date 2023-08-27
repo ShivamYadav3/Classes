@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //String reverse without reversing of individual words (Array of elements can be reverse
+  // with reverse() method but for string it is won't possible so required to split and then join.
+  
+  // algo=>
+  // 1) split to the string
+  // 2) take a blank array
+  // 3) run a loop in split str
+  // 4) take a blank string
+  // 5) run a nested reverse loop over [i]
+  // 6) join the output in to the blank string
+  // 7) push that string in to the array
+  // 8) join to the array
+
+  // input => my name is shivam
+  // output=> ym eman si mavihs
+  // let str="my name is shivam"
+
+  //   const reverseWord = (str) => {
+  //     const splitStr = str.split(" ");
+  //     let output = [];
+  //     for (let i = 0; i < splitStr.length; i++) {
+  //       let reverseWord = "";
+  //       for (let j = splitStr[i].length - 1; j >= 0; j--) {
+  //         reverseWord += splitStr[i][j];
+  //       }
+  //       output.push(reverseWord);
+  //     }
+  //     return output.join(" ");
+  //   };
+  //   console.log(reverseWord("my name is shivam")); //ym eman si mavihs
+
+  //   function removeDuplicates(){
+  //    var string ="India is my country"
+  //    let result = string.split('').reverse().join('').split(' ').reverse().join(' ')
+  //    return result
+  // }
+  // console.log(removeDuplicates())
+</script>

@@ -1,0 +1,131 @@
+body {
+  font-family: sans-serif;
+  margin: 10px;
+  background-color: #f8ffe5;
+}
+.top {
+  border: 2px solid;
+  background-color: #ffc43d;
+}
+h1 {
+  margin-left: 10px;
+}
+.flexbottom {
+  display: flex;
+}
+.left {
+  border: 2px solid;
+  border-top: 0px;
+  border-right: 0px;
+  width: 30%;
+}
+.leftsidebtn {
+  margin: 20px;
+  margin-bottom: 0px;
+  display: inline-flex;
+}
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid black;
+  border-bottom: 0px;
+  cursor: pointer;
+  border-radius: 0px;
+  background-color: #dda15e;
+}
+.btn:hover {
+  background-color: #e63946;
+}
+.leftdata {
+  border: 2px solid;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 10px;
+}
+.data {
+  padding: 5px;
+  margin: 3px;
+  padding-right: 135px;
+}
+.date {
+  padding: 5px;
+  margin: 3px;
+  padding-right: 158px;
+}
+.submit {
+  padding: 5px;
+  margin: 3px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #dda15e;
+  color: white;
+}
+.submit:hover {
+  background-color: #e63946;
+}
+.leftbottom {
+  border: 2px solid;
+  margin: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.pointers {
+  margin: 25px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.range {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.right {
+  border: 2px solid;
+  border-top: 0px;
+  width: 75%;
+}
+.header {
+  border: 2px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+pre {
+  font-weight: bolder;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.rightbottom {
+  display: flex;
+  border: 2px solid;
+  margin: 20px;
+  padding: 10px;
+}
+.rightdata {
+  width: 70%;
+}
+.rightimage {
+  width: 30%;
+}
+.td {
+  padding-right: 370px;
+}
+img {
+  height: 150px;
+}
+button {
+  font-size: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: #e63946;
+  color: white;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #dda15e;
+  cursor: pointer;
+}

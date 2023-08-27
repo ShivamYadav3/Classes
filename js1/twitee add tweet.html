@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="form-group">
+        <label>Your Comment</label>
+        <div>
+          <input
+            id="tweet-input"
+            value=""
+            type="text"
+            placeholder="Enter your comment"
+          >
+        </div>
+        <div>
+          <button id="tweet-btn" onclick="addTweet()">Tweet Now</button>
+        </div>
+      </div>
+      <div id="tweet-list"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function addTweet() {
+    const tweetInput = document.getElementById("tweet-input").value;
+
+    const tweetsContainer = document.getElementById("tweet-list");
+
+    const divElem = document.createElement("div");
+    divElem.innerText = tweetInput;
+
+    tweetsContainer.appendChild(divElem);
+    document.getElementById("tweet-input").value = "";
+  }
+</script>

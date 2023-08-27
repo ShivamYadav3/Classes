@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // var reverse = function (x) {
+  //   let arr = x.toString().split("").reverse();
+  //   console.log(arr)
+  //   if (arr[arr.length - 1] === "-") {
+  //     arr.pop();
+  //     arr.unshift("-");
+  //   }
+  //   let arr2 = Number(arr.join(""));
+  //   if (arr2 > 2 ** 31 || arr2 <= -(2 ** 31)) {
+  //     return 0;
+  //   }
+  //   return arr2;
+  // };
+  // console.log(reverse(0012300));
+
+ 
+
+  // var reverse = function (x) {
+  //   let num = x + ""; 
+  //   console.log(num)
+  //   let final = 0;
+  //   for (let i = num.length - 1; i >= 0; i--) {
+  //     if (num[i] === "-") {
+  //       final = 0 - final; 
+  //     } else {
+  //       final += num[i];
+  //     }
+  //   }
+  //   +final;
+  //   if (final > 2 ** 31 || final <= -(2 ** 31)) {
+  //     return 0;
+  //   }
+  //   // return final;
+  // };
+  // console.log(reverse(00123));
+
+
+
+  // Ankit bhai 
+
+  function reverseInteger(x) {
+  const MAX_INT = Math.pow(2, 31) - 1;
+  const MIN_INT = -Math.pow(2, 31);
+
+  let reversed = 0;
+  while (x !== 0) {
+    console.log(x,"x6")
+    const digit = x % 10;
+    console.log(digit,"digit")
+    reversed = reversed * 10 + digit;
+    console.log(reversed,"ok")
+    console.log(x,"x")
+    x = Math.trunc(x / 10);
+    console.log(x,"x0")
+    // Check if the reversed integer is within the 32-bit range
+    if (reversed > MAX_INT || reversed < MIN_INT) {
+      return 0;
+    }
+  }
+
+  return reversed;
+}
+
+console.log(reverseInteger(-123))
+
+// Let's take an example you're having 1234
+// Now what they're doing is
+// Dividing number by 10 & getting remainder
+// 1- 1234 % 10 = 4
+// considering revsrsed = 0
+// reversed = revered * 10 + 4 = 4
+// 
+//Then saving number as 123 after divinding
+// Next 4*10 + 3
+// Next 43 * 10 + 2
+// Next 432 * 10 + 1
+// Final 4321
+
+
+// function reverseIntegerV2(x) {
+//   const MAX_INT = Math.pow(2, 31) - 1;
+//   const MIN_INT = -Math.pow(2, 31);
+
+//   let reversed = 0;
+//   while (x !== 0) {
+//     const digit = x % 10;
+//     reversed = reversed * 10 + digit;
+//     x = x > 0 ? Math.floor(x / 10) : Math.ceil(x / 10);
+
+//     // Check if the reversed integer is within the 32-bit range
+//     if (reversed > MAX_INT || reversed < MIN_INT) {
+//       return 0;
+//     }
+//   }
+
+//   return reversed;
+// }
+// console.log(reverseIntegerV2(0123))
+
+</script>

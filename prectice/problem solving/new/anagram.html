@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function check(input1, input2) {
+    let a = input1.length;
+    let b = input2.length;
+    if (a !== b) {
+      return false;
+    }
+    let c = input1.split("").sort().join("");
+    let d = input2.split("").sort().join("");
+    console.log(c, d);
+    if (c === d) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  console.log(check("mango", "ongam"));
+  console.log(check("fhsf", "fhweuf"));
+
+  (function (a) {
+    return (function () {
+      console.log(a);
+      a = 23;
+    })();
+  })(45);
+</script>

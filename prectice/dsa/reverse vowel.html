@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   Example 1:
+
+  //   Input: s = "hello"
+  //   Output: "holle"
+
+  //   Example 2:
+
+  //   Input: s = "leetcode"
+  //   Output: "leotcede"
+
+  var reverseVowels = function (s) {
+    let splitStr = s.split("");
+    let blank = [];
+    let count = splitStr.length - 1;
+    for (let i = 0; i <= splitStr.length - 1; i++) {
+      if (["a", "e", "i", "o", "u","A","E","I","O","U"].includes(splitStr[i])) {
+        console.log(splitStr[i], i);
+        for (let j = count; j >= i; j--) {
+          if (["a", "e", "i", "o", "u","A","E","I","O","U"].includes(splitStr[j])) {
+            blank[i] = splitStr[j];
+            blank[j] = splitStr[i];
+            count=j-1
+            console.log(blank, "before",count);
+            break;
+          }
+        }
+      } else {
+        blank[i] = splitStr[i];
+      }
+    }
+    return blank.join("");
+  };
+  console.log(reverseVowels("leetcode"));
+</script>

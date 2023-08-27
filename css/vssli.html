@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    .header {
+      display: flex;
+      height: 66px;
+      padding-left: 10px;
+      border: 1px solid silver;
+      padding-right: 30px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .right{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav_list {
+      margin-left: 22px;
+      gap: 22px;
+      margin-top: 11px;
+      font-size: 15px;
+      list-style-type: none;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+    .nav_list a {
+      text-decoration: none;
+      color: black;
+    }
+    .red {
+      padding: 8px 16px 8px 16px;
+      background-color: #eb5d1e;
+      border-radius: 20px;
+      position: relative;
+      top: -8px;
+    }
+    .red a {
+      color: #fff;
+    }
+    .icon {
+      display: none;
+    }
+    .okk{
+        /* display: block; */
+    }
+    @media(max-width: 1070px) {
+      .icon {
+        display: block;
+        width: 25px;
+        height: 25px;
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 66px;
+        right: 20px;
+        justify-content: center;
+      }
+      .okk{
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="left">
+        <img src="https://vidhyaskillschool.com/assets/img/logo_v2.webp" alt=""  width="80px" height="66px"/>          
+      </div>
+      <div class="icon" onclick="hide()">
+        <span class="material-icons-outlined"> format_list_bulleted </span>
+      </div>
+      <div class="right okk">
+        <li class="nav_list"><a href="#" style="color: #eb5d1e">Home</a></li>
+        <li class="nav_list"><a href="#">Curriculum</a></li>
+        <li class="nav_list"><a href="#">Faq</a></li>
+        <li class="nav_list"><a href="#">About Us</a></li>
+        <li class="nav_list"><a href="#">Contact Us</a></li>
+        <li class="nav_list"><a href="#">Blog</a></li>
+        <li class="nav_list red"><a href="#">Cohort 9 | Tap to apply</a></li>
+        <li class="nav_list red"><a href="#">Apply to Cohort 9</a></li>
+        <li class="nav_list red"><a href="#">Hire From Us</a></li>
+      </div>
+      
+    </div>
+  </body>
+  <script>
+    function hide() {
+      let abc = document.getElementsByClassName("okk")[0];
+      if (abc.style.display === "none") {
+        abc.style.display = "block";
+      } else {
+        abc.style.display = "none";
+      }
+    }
+  </script>
+</html>

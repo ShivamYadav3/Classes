@@ -1,0 +1,63 @@
+0.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    // 1st method
+    // let Word="shankar";
+    // let name=""
+    // for (let i =Word.length-1; i>=0; i--){
+    //     name +=Word[i]
+
+    // }console.log(name)
+
+    //2nd method
+
+    // function reversestr(str){
+    //     let result =""
+    //     for (let i =str.length-1; i>=0; i--){
+    //         result +=str[i]
+    //     }
+    //     return result
+    // }
+    // console.log(reversestr("shivam"))
+
+    //3rd method
+
+    // function okk(str){
+    //     let split =str.split("");
+    //     let ulta=split.reverse();
+    //     let final=ulta.join("");
+    //     return final
+    // }
+    // console.log(okk("shiv"))
+
+    // 4 th method
+
+    // let name="shiv"
+    // let namee=name.split("").reverse().join("")
+    // console.log(namee)
+
+
+    // 5 th method
+
+
+    function reverseString(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+console.log(reverseString("new okk"));
+
+
+</script>

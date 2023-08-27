@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  console.log("star paterrn \n");
+  let result = "";
+  for (let i = 5; i >= 1; i--) {
+    for (let j = i; j <= 5; j++) {
+      result += "*";
+    }
+    result += "\n";
+  }
+  console.log(result);
+
+  //   -----------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result1 = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+      result1 += "*";
+    }
+    result1 += "\n";
+  }
+  console.log(result1);
+
+  //------------------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result2 = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = i; j <= 5; j++) {
+      result2 += "*";
+    }
+    result2 += "\n";
+  }
+  console.log(result2);
+
+  //---------------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result3 = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+      result3 += "*";
+    }
+    result3 += "\n";
+  }
+  console.log(result3);
+
+  //---------------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result4 = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+      if (i == 1 || i == 5) {
+        result4 += "*";
+      } else {
+        if (j == 1 || j == 5) {
+          result4 += "*";
+        } else {
+          result4 += " ";
+        }
+      }
+    }
+    result4 += "\n";
+  }
+  console.log(result4);
+  //----------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result5 = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5 - i; j++) {
+      result5 += " ";
+    }
+    for (let k = 1; k <= i; k++) {
+      result5 += "*";
+    }
+    result5 += "\n";
+  }
+  console.log(result5);
+
+  //------------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result6 = "";
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5 - i; j++) {
+      result6 += "*";
+    }
+    result6 += "\n";
+  }
+  console.log(result6);
+
+  //---------------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result7 = "";
+  for (let i = 0; i <= 6; i++) {
+    for (let j = 0; j <= i; j++) {
+      if (i == 6) {
+        result7 += "*";
+      } 
+      else {
+        if (j == 0 || j == i) {
+          result7 += "*";
+        } 
+        else {
+          result7 += " ";
+        }
+      }
+    }
+    result7 += "\n";
+  }
+  console.log(result7);
+
+  //-----------------------------------------------------
+
+  console.log("star paterrn \n");
+  let result8 = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5 - i; j++) {
+      result8 += " ";
+    }
+    for (let k = 1; k <= i*2-1; k++) {
+      result8 += "*";
+    }
+    result8 += "\n";
+  }
+  console.log(result8);
+</script>

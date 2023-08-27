@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // // 1 st method
+  const arr1 = [12, 3, 4, 1, 6, 9];
+  for (let i = 0; i <= arr1.length - 1; i++) {
+    for (let j = i + 1; j <= arr1.length - 1; j++) {
+      for (let k = j + 1; k <= arr1.length - 1; k++) {
+        if (arr1[i] + arr1[j] + arr1[k] === 24) {
+          console.log("1st Method =>  " + arr1[i], arr1[j], arr1[k]);
+        }
+      }
+      break;
+    }
+  }
+
+  // // 2 nd method
+
+  const k = 24;
+  const Obj = {};
+
+  const arr2 = [12, 3, 4, 1, 6, 9];
+  for (let i = 0; i <= arr2.length - 1; i++) {
+    for (let j = i + 1; j <= arr2.length - 1; j++) {
+      let sumOfTwoIndex = arr2[i] + arr2[j];
+      let checkValue = k - sumOfTwoIndex;
+      Obj[arr2[i]] = "found";
+      //  console.log(Obj)
+      if (Obj.hasOwnProperty(checkValue)) {
+        console.log("2nd Method =>  " + arr2[i], arr2[j], checkValue);
+        break;
+      }
+    }
+  }
+
+  // 3 rd method
+
+  const sum = 24;
+  const obj = {};
+
+  const arr = [12, 3, 4, 1, 6, 9];
+  for (let i = 0; i <= arr.length - 1; i++) {
+    let minus = sum - arr[i];
+    for (j = i + 1; j <= arr.length - 1; j++) {
+      let difference = minus - arr[j];
+      obj[arr[i]] = "found";
+      if (obj.hasOwnProperty(difference)) {
+        console.log("3rd Method =>  ", arr[i], arr[j], difference);
+        break;
+      }
+    }
+  }
+</script>

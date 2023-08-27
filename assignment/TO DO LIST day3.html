@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        display: flex;
+        gap: 10px;
+        margin-top: 50px;
+    }
+    .input{
+        /* padding-left: 10px; */
+        font-size: 14px;
+    }
+    .box input{
+        padding-left: 10px;
+        width: 250px;
+        height: 25px;
+        font-size: 14px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid silver;
+    }
+    .button{
+        height: 50px;
+    }
+    button{
+        height: 30px;
+        background-color: aqua;
+        border: 1px solid silver;
+        width: 70px;
+        border-radius: 5px;
+    }
+    .box3{
+        height: 40px;
+        /* text-align: center; */
+        background-color: aqua;
+        width: 600px;
+        /* margin-left: 10px; */
+        font-size: 20px;
+        padding-top: 10px;
+        border-radius: 10px;
+        border: 1px solid silver;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 15px;
+    }
+    .button2{
+        float: right;
+        background-color: white;
+    }
+    .button3{
+        float: right;
+        background-color: white;
+        margin-right: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Create Text through Input Box</h1>
+        <div class="box">
+            <div class="input">
+                <input type="text" id="enter" placeholder="Enter Something">
+            </div>
+            <div class="button">
+                <button onclick="shivam()">ADD</button>
+            </div>
+        </div>
+        <div class="box2">
+            <h1>Your Input</h1>
+            <div id="list"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function shivam(){
+        const elem=document.getElementById("enter")
+        const elem3=elem.value
+        const elem1=document.createElement("div")
+        elem1.className="box3" 
+        elem1.innerText=elem3
+        if(elem3===""){
+            alert("Enter Something")
+            return;
+        }
+    
+        const button1=document.createElement("button")
+        button1.innerText="Remove"
+        button1.setAttribute("onclick", "shiv(this)")
+        button1.className="button2"
+        elem1.append(button1)
+
+      
+
+        const elem2=document.getElementById("list")
+        elem2.append(elem1)
+        elem.value=""
+    }
+    function shiv(okk){
+        // const element=document.getElementsByClassName("box3");
+        // for(let i=0;i<element.length;i++){
+        //     element[i].onClick=(()=>{
+        //         element[i].remove();
+        //     })
+        // }
+        console.log(okk.parentElement,this)
+        okk.parentElement.remove();
+    }
+    
+</script>

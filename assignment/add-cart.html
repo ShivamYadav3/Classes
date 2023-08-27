@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick=" initcart2()">dabar hair oil</button>
+    <button onclick=" initcart()">milk rusk</button>
+  </body>
+</html>
+<script>
+//   let arr = [];
+
+//   const myBasket = (no, product) => {
+//     function inner() {
+//       let obj = {
+//         id: no,
+//         name: product,
+//       };
+//       arr.push(obj);
+//       return console.log("Dmart-Cart", arr);
+//     }
+//     return inner;
+//   };
+//   const initcart = myBasket(10, "milk rush");
+//   const initcart2 = myBasket(1, "dabar hair oil");
+
+
+let arr = [];
+
+  const myBasket = (no, product) => {
+    function inner() {
+      let objIndex = arr.findIndex(obj => obj.id === no);
+      if (objIndex !== -1) {
+        // product already exists in cart, increase quantity
+       ++arr[objIndex].qty
+      } else {
+        // product does not exist in cart, add new object
+        let obj = {
+          id: no,
+          name: product,
+          qty:1
+        };
+        arr.push(obj);
+      }
+      console.log("Dmart-Cart", arr);
+    }
+    return inner;
+  };
+
+  const initcart = myBasket(10, "milk rusk");
+  const initcart2 = myBasket(1, "dabar hair oil");
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"><h1>this is heading</h1></div>
+    <div id="box1">
+        <p>this is text</p>
+        <span>this is span</span>
+    </div>
+    <div id="box2">this is box 2</div>
+    <div id="box3">this is box 3</div>
+    <div id="box4"> this is also a box </div>
+    <input type="text" value="this is value" id="okk">
+</body>
+<script>
+    const elem =document.getElementById("box")
+    elem.innerText="heading"
+    const elem1 =document.getElementById("box1")
+    elem1.textContent="this is also a text"
+
+    const elem2 =document.getElementById("box2")
+    elem2.innerHTML="<h2>this is heading</h2>"
+    const elem3 =document.getElementById("box3")
+    elem3.style="font-size:50px; color: red;"
+
+    const elem4 =document.getElementById("box4")
+    elem4.innerHTML="<h1>okk</h1>"
+    const elem5=document.getElementById("okk")
+    elem5.value="enter something"
+</script>
+</html>

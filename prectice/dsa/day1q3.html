@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //Remove Duplicate characters from array of element using filter
+
+  // algo=>
+  // 1) take a  given array 
+  // 2) create a function 
+  // 3) take a blank array
+  // 4) run a loop in the given array
+  // 5) check the blank array if blank array not includes the value of given array
+  //  so push that value in to blank array 
+
+
+  let arr = [1, 2, 3, 45, 45, 4, 5, 6, 6, 2, 3];
+  const checkDuplicate = (arr) => {
+    let array = [];
+    for (let i = 0; i < arr.length; i++) {
+      console.log( arr.indexOf(arr[i]), i)
+      if (!array.includes(arr[i])) {
+        array.push(arr[i]);
+      }
+    }
+    return array;
+  };
+  console.log(checkDuplicate(arr));
+
+  const okk = arr.filter((data, index) => arr.indexOf(data) === index);
+  console.log("using filter",okk);
+</script>

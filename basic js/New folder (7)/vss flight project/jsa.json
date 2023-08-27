@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "From": "ABC",
+        "TO": "XYZ",
+        "Departing": "04-11-22",
+        "Returning": "06-11-22",
+        "price": "10000"
+    },
+    {
+        "id": "2",
+        "From": "DEF",
+        "TO": "TUV",
+        "Departing": "04-11-22",
+        "Returning": "05-11-22",
+        "price": "20000"
+    },
+    {
+        "id": "3",
+        "From": "GHI",
+        "TO": "TUV",
+        "Departing": "07-11-22",
+        "Returning": "09-11-22",
+        "price": "30000"
+    },
+    {
+        "id": "4",
+        "From": "ABC",
+        "TO": "JKL",
+        "Departing": "10-11-22",
+        "Returning": "12-11-22",
+        "price": "40000"
+    },   
+    {
+        "id": "5",
+        "From": "DEF",
+        "TO": "XYZ",
+        "Departing": "04-11-22",
+        "Returning": "06-11-22",
+        "price": "50000"
+    }
+]

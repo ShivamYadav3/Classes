@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+</html>
+<script>
+    // 1 st method
+
+    // const factorial = (number) =>{
+    //     let result=1;
+    //     for(let i =number; i>0; i--){
+    //     result *= i;
+    //     }return result
+    // }
+    // console.log(factorial(5), factorial(6), factorial(170));
+
+    // // 2 nd method
+
+    // let Factorial = (n) => {
+    //     let result = 1;
+    //     if(n==0 || n==1){
+    //         return result
+    //     }
+    //     else{
+    //         result = n * Factorial(n-1);
+    //         return result    // if you cosnsole.log here so ans will be NaN
+    //     }
+    // }
+    // console.log(Factorial(5), Factorial(6))
+
+    let Factorial1 = (n) => {
+        if(n==0 || n==1){
+            return 1
+        }
+        else{
+            return n * Factorial1(n-1);
+        }
+    }
+    console.log(Factorial1(5), Factorial1(6))
+</script>

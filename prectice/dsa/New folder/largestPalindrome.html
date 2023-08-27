@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str = "hello mam what are you noon anakana doing naman";
+  function largestPalindrome(str) {
+    let str1 = str.split(" ");
+    let arr = [];
+    let final = "";
+    for (let i = 0; i < str1.length; i++) {
+      let word = "";
+      let str2 = str1[i];
+      for (let j = str2.length - 1; j >= 0; j--) {
+        word += str2[j];
+      }
+      if (str2 === word) {
+        arr.push(word);
+      }
+    }
+    for (let k = 0; k < arr.length; k++) {
+      if (arr[k].length > final.length) {
+        final = arr[k];
+      }
+    }
+    return final;
+  }
+  console.log(largestPalindrome(str));
+
+
+  // mahesh bhai
+  // function largestPalandrom(input1) {
+  //       if (typeof input1 !== typeof "") {
+  //         console.log("Input should be string");
+  //       } else {
+  //         input1.toLowerCase();
+  //         let words = input1.split(" ");
+  //         console.log(words,"f");
+  //         let palandrom = [];
+  //         console.log("Before", palandrom);
+  //         for (let i = 0; i < words.length; i++) {
+  //           if (words[i] === words[i].split("").reverse().join("")) {
+             
+  //               palandrom.push(words[i]);
+             
+  //           }
+  //         }
+  //         console.log("After", palandrom);
+  //         return palandrom;
+  //       }
+  //     }
+  //     largestPalandrom("hello mam she is also madam");
+
+  // mahesh bhai 2nd method
+
+      //   function largestPalindrom(input) {
+      //   //string validation checking----------------
+      //   if (typeof input !== "string") {
+      //     console.log("Input should be string");
+      //   } else {
+      //     // convert string into lower case and split------------
+      //     input = input.toLowerCase();
+      //     let words = input.split(" ");
+
+      //     let palindrom = [" "];
+      //     for (let i = 0; i < words.length; i++) {
+      //       let x = JSON.stringify(words[i].split(""));
+      //       let y = JSON.stringify(words[i].split("").reverse());
+
+      //       if (x === y) {
+      //         if (palindrom[0].length < words[i].length) {
+      //           palindrom[0] = words[i]; //it will replace sprevious element
+      //         }
+      //       }
+      //     }
+      //     console.log("Largest Palindrome in given string", palindrom);
+      //   }
+      // }
+      // // calling function-----------------
+      // largestPalindrom("hello mad she is also madam");
+      // largestPalindrom(
+      //   " mahem surerus madam  my nana and tere mama ki mamima are saas"
+      // );
+
+
+
+      // const str = "hello mam what are you noon anakana doing naman";
+
+
+      //final
+
+/**
+ * @description Method to check if the following string is a palindrome
+ * @param {String} inputStr
+ * @returns {Boolean}
+ */
+function checkPalindrome(inputStr) {
+  if (!inputStr || typeof inputStr !== "string") {
+    return false;
+  }
+
+  const splittedStr = inputStr.split("");
+  for (let i = 0; i < splittedStr.length / 2; i++) {
+    if (splittedStr[i] !== splittedStr[splittedStr.length - i - 1]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/**
+ * @description Method to find largest palindrome from the string
+ * @param {String} inputStr
+ * @returns {String}
+ */
+function largestPalindromeV2(inputStr) {
+  if (!inputStr || typeof inputStr !== "string") {
+    return "Please enter a valid string";
+  }
+
+  const splittedStr = inputStr.split(" ");
+  let largestPalindromeStr = "";
+
+  for (let i = 0; i < splittedStr.length; i++) {
+    const isPalindrome = checkPalindrome(splittedStr[i]);
+    if (!isPalindrome) {
+      continue;
+    }
+
+    if (splittedStr[i].length > largestPalindromeStr.length) {
+      largestPalindromeStr = splittedStr[i];
+    }
+  }
+
+  if (!largestPalindromeStr) {
+    return "There's no palindrome found";
+  }
+
+  return largestPalindromeStr;
+}
+
+console.log(largestPalindromeV2(str));
+</script>

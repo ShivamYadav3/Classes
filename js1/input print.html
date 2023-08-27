@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is a heading</h1>
+    <p>this is a paragraph</p>
+
+    <form action="" name="myForm" onsubmit="validateForm()">
+      NAME:
+      <input
+        type="text"
+        name="fname"
+        placeholder="enter your name"
+        class="satyam"
+      />
+      <input type="button" onclick="shivam()" value="submit" />
+    </form>
+    <div class="okk"></div>
+  </body>
+  <script>
+    console.log("Hey");
+    document.write("Hey i am js", Date());
+
+    // function validateForm (){
+    //     console.log("inside form")
+
+    //     if(!document.forms.myForm.fname.value){
+    //         alert("en")
+    //     }
+    //     else{
+    //         alert("Enter something")
+
+    //     }
+    // }
+    function shivam() {
+      let abc = document.getElementsByClassName("satyam")[0].value;
+      let xyz = document.getElementsByClassName("okk")[0];
+      let pqr = document.createElement("div");
+      pqr.innerText = abc;
+      xyz.appendChild(pqr);
+      document.getElementsByClassName("satyam")[0].value = "";
+    }
+
+    // var list = [
+    //     {
+    //     img:"url",
+    //     text:"text"
+    //     },
+    //     {
+    //     img:"url",
+    //     text:"text"
+    //     },
+    //     {
+    //     img:"url",
+    //     text:"text"
+    //     }, {
+    //     img:"url",
+    //     text:"text"
+    //     }
+    // ]
+    // console.log(list)
+    // document.write(list)
+
+    var para = document.createElement("p");
+    console.log(para);
+    var paraText = document.createTextNode(
+      "hey I am dynamically generated tag"
+    );
+    para.innerHTML = "hey I am dynamically generated tag";
+    console.log(para);
+
+    para.appendChild(paraText);
+
+    console.log(document.body);
+    document.body.append(para);
+
+    var remove = document.getElementsByTagName("p")[0].remove();
+    // console.log(remove)
+  </script>
+</html>

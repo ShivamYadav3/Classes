@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let arr = [5, 454, 54, 1, 4, 12, 4, 1, 464, 457, 55, 54, 4547, 5457];
+  // for (let i = 0; i < arr.length; i++) {
+  //   for (let j = 0; j < arr.length - i; j++) {
+  //       // console.log(i,j)
+  //     if (arr[j] > arr[j + 1]) {
+  //       let temp = arr[j + 1];
+  //       arr[j + 1] = arr[j];
+  //       arr[j] = temp;
+  //     }
+  //   }
+  // }
+  // console.log(arr);
+
+  // 2 largest
+
+  let one = arr[0];
+  let two = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > one) {
+      two = one;
+      one = arr[i];
+    }
+  }
+  console.log(one, two);
+</script>

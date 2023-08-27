@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      display: flex;
+      gap: 10px;
+      margin-top: 50px;
+    }
+    .input {
+      font-size: 14px;
+    }
+    .box input {
+      padding-left: 10px;
+      width: 250px;
+      height: 25px;
+      font-size: 14px;
+      border-radius: 4px;
+      outline: none;
+      border: 1px solid silver;
+    }
+    #button {
+      height: 50px;
+    }
+    button {
+      height: 30px;
+      background-color: aqua;
+      border: 1px solid silver;
+      width: 70px;
+      border-radius: 5px;
+    }
+    #button8 {
+      height: 50px;
+      display: none;
+    }
+
+    .main {
+      display: flex;
+      width: 800px;
+      /* justify-content: center; */
+      align-items: center;
+      margin-top: 15px;
+      background-color: aqua;
+      gap: 40px;
+      border-radius: 10px;
+    }
+    .box3 {
+      height: 40px;
+      /* background-color: aqua; */
+      width: 500px;
+      font-size: 20px;
+      /* padding-top: 10px; */
+      display: flex;
+      align-items: center;
+
+      /* border: 1px solid silver; */
+      padding-left: 20px;
+      padding-right: 20px;
+      /* margin-top: 15px; */
+    }
+    .button2 {
+      float: right;
+      background-color: white;
+    }
+    .button3 {
+      float: right;
+      background-color: white;
+      margin-right: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Create Text through Input Box</h1>
+      <div class="box">
+        <div class="input">
+          <input type="text" id="enter" placeholder="Enter Something" />
+        </div>
+        <div id="button">
+          <button onclick="shivam()">ADD</button>
+        </div>
+        <div id="button8">
+          <button onclick="shiva()">SAVE</button>
+        </div>
+      </div>
+      <div class="box2">
+        <h1>Your Input</h1>
+        <div id="list"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const elem = document.getElementById("enter");
+  const button = document.getElementById("button");
+  const elementt = document.getElementsByClassName("box3");
+  const editTodo = document.getElementById("button8");
+  const element = document.getElementsByClassName("main");
+  const elem2 = document.getElementById("list");
+  let okk;
+
+  function shivam() {
+    let main = document.createElement("div");
+    main.className = "main";
+    let buttonDiv = document.createElement("div");
+    const elem1 = document.createElement("div");
+    elem1.className = "box3";
+    elem1.innerText = elem.value;
+    main.append(elem1);
+    main.append(buttonDiv);
+    if (elem.value === "") {
+      alert("Enter Something");
+      return;
+    }
+
+    const button1 = document.createElement("button");
+    button1.innerText = "Remove";
+    button1.setAttribute("onclick", "shiv()");
+    button1.className = "button2";
+    buttonDiv.append(button1);
+
+    const button4 = document.createElement("button");
+    button4.innerText = "Edit";
+    button4.setAttribute("onclick", "edit()");
+    button4.className = "button3";
+    buttonDiv.append(button4);
+
+    
+    elem2.append(main);
+    elem.value = "";
+  }
+
+  function shiv() {
+    for (let i = 0; i < element.length; i++) {
+      element[i].onclick = function () {
+        element[i].style.display = "none";
+      };
+    }
+  }
+
+  function edit() {
+    editTodo.style.display = "block";
+    button.style.display = "none";
+    for (let i = 0; i < elementt.length; i++) {
+      element[i].onclick = function () {
+        const nal = elementt[i].innerText;
+        elem.value = nal;
+        okk = i;
+      };
+    }
+  }
+
+  function shiva() {
+    editTodo.style.display = "none";
+    button.style.display = "block";
+    elementt[okk].innerText = elem.value;
+    elem.value = "";
+  }
+</script>

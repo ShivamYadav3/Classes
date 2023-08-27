@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // * Given a string that contains words separated by digits(0-9). Reverse words in place
+  // * Eg: asd1fa -> dsa1af
+  // input=dsa1af
+  // output=asd1fa
+
+  let str = "dsa1fa";
+  let blank = [];
+  let after;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].match(/[1-10]/g)) {
+      blank.reverse();
+      blank.push(str[i]);
+      break;
+    } else {
+      blank.push(str[i]);
+    }
+  }
+  let splitStr = str.split("");
+  for (let i = 0; i < splitStr.length; i++) {
+    if (splitStr[i].match(/[1-10]/g)) {
+      after = splitStr.slice(i + 1);
+      after.reverse();
+    }
+  }
+  let final = [...blank, ...after].join("");
+  console.log(final);
+</script>

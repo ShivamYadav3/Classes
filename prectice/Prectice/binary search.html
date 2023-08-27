@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let arr = [1, 5, 6, 9, 12, 15, 69, 89, 99, 102, 109, 115, 119, 225, 356, 589];
+  let start = 0;
+  let end = arr.length - 1;
+  let num =5;
+  let out = "not found";
+  // while(start<=end){
+  //     let mid=Math.floor((start+end)/2)
+  //     if(arr[mid]===num){
+  //         out=mid
+
+  //         break
+  //     }
+  //     else if(arr[mid]<num){
+  //         start=mid+1
+  //     }
+  //     else{end=mid-1}
+
+  // }
+  // console.log(out)
+
+  const binaryRecursion = (start, end) => {
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] === num) {
+      return mid;
+    } else if (arr[mid] < num) {
+      return binaryRecursion(mid + 1, end);
+    } else {
+      return binaryRecursion(start, mid - 1);
+    }
+  };
+  console.log(binaryRecursion(start, end));
+</script>

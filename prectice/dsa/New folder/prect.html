@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// const addNums=(...args)=>{
+//         let result=0;
+//         for(let i=0; i<args.length; i++){
+//             result+=args[i]
+//         }
+//         return result
+
+//     }
+//     const addNumsV2=(...args)=>{
+//         const add=args.reduce((acc,data)=>acc+data,0)
+//         return add
+//     }
+
+// console.log(addNumsV2(1,2));
+// console.log(addNumsV2(1,2,3,4,5,6));
+// console.log(addNums(1,2,55,3,5));
+// console.log(addNums(1,2,90,67));
+// addNums(1,2,90,67,33,2,1,4,5,3);
+
+// const promise=(time)=>{
+//     return new Promise((res, rej)=>{
+//         setTimeout(()=>{
+//             res("anything")
+//         },time)
+//     })
+// }
+// promise(10000).then((data)=>{
+//     console.log(data)
+// })
+// function func2(){
+//     console.log("something")
+// }
+
+// let func =(data,)=>{
+// console.log("some")
+// }
+// func()
+
+
+// solve this -----------------------------------------------
+
+var obj = {
+    a: {
+        b: {
+            c: 12,
+            j: false
+        },
+        k: null
+    }
+};
+
+const findPath = (object, path) => {
+    let key =path.split(".");
+    console.log(key)
+};
+
+
+console.log(findPath(obj, 'a.b.c')); // 12
+console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
+console.log(findPath(obj, 'a.b.d')); // undefined
+console.log(findPath(obj, 'a.c')); // undefined
+console.log(findPath(obj, 'a.b.c.d')); // undefined
+console.log(findPath(obj, 'a.b.c.d.e')); // undefined
+console.log(findPath(obj, 'a.b.j')); //false
+console.log(findPath(obj, 'a.b.j.k')); //undefined
+console.log(findPath(obj, 'a.k')); //null
+
+</script>

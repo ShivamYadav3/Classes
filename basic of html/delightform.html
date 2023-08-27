@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deloitte</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            width: 1345px;
+            height: 635px;
+        }
+        .header {
+            border: 2px solid black;
+            width: 1345px;
+            height: 60px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            background-color: black; 
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .header_menu {
+            border: 2px solid black;
+            width: 100px;
+            height: 50px;
+            margin: 3px;
+            text-align: center;
+        }
+        .header_menu_name {
+            margin-top: 15px;
+            color: white;
+        }
+        .content {
+            border: 2px solid black;
+            width: 1200px;
+            height: 430px;
+            margin-top: 70px;
+            margin-left: 68px;
+        }
+        .sub_content {
+            border: 2px solid black;
+            width: 1200px;
+            height: 10px;
+            background-color: black;
+            border-right: none;
+        }
+        .field {
+            width: 300px;
+            padding: 5px 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <div class="header_menu"><div class="header_menu_name"><b>Deloitte</b> </div></div>
+        <div class="header_menu"><div class="header_menu_name">Services</div></div>
+        <div class="header_menu"><div class="header_menu_name">Industries</div></div>
+        <div class="header_menu"><div class="header_menu_name">Insights</div></div>
+        <div class="header_menu"><div class="header_menu_name">Careers</div></div>
+        <div class="header_menu"><div class="header_menu_name">Search</div></div>
+        <div class="header_menu"><div class="header_menu_name">language</div></div>
+        <div class="header_menu"><div class="header_menu_name">contact us</div></div>
+    </div>
+    <div class="content"><div class="sub_content">
+         <h1  style="margin-left: 10px;"><b>Application Form</b></h1>
+<form action="/action_page.php" style="margin-left: 10px;">
+    <label for="fname">First Name:</label><br>
+    <input class="field" type="text" placeholder="Enter your name" id="fname" name="firstname"><br>
+    <label  for="lname">Last name:</label><br>
+    <input class="field" type="text" name="Lastname" id="lname" placeholder="Enter your last name"><br>
+    <label for="email">Email id:</label><br>
+    <input class="field" type="email" name="email" id="email" placeholder="Enter your email"><br>
+    <label for="phone">Contact No:</label><br>
+    <input class="field" type="tel" id="phone" name="phone" placeholder="Enter your no"><br>
+    <label for="Gender">Gender:</label><br>
+    Male
+    <input  type="radio" name="Gender" id="Male" value="Male">
+    Female
+    <input type="radio" name="Gender" id="Female" value="Female"><br>
+    <input class="field" type="submit" name="Submit">
+</form>
+    </div></div>
+    </div>
+</body>
+</html>

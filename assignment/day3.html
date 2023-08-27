@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        display: flex;
+        gap: 10px;
+    }
+    .input{
+        /* padding-left: 10px; */
+        font-size: 14px;
+    }
+    .box input{
+        padding-left: 10px;
+        width: 250px;
+        height: 25px;
+        font-size: 14px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid silver;
+    }
+    .button{
+        height: 50px;
+    }
+    button{
+        height: 30px;
+        background-color: aqua;
+        border: 1px solid silver;
+        width: 70px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="input">
+                <input type="text" id="enter" placeholder="Enter Something">
+            </div>
+            <div class="button">
+                <button onclick="shivam()">ADD</button>
+            </div>
+        </div>
+        <div class="box2">
+            <h1>Your Input</h1>
+            <div id="list"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function shivam(){
+        const elem=document.getElementById("enter")
+        const elem3=elem.value
+        const elem1=document.createElement("div")
+        elem1.innerText=elem3
+        if(elem3===""){
+            alert("Enter Something")
+            return;
+        }
+        const elem2=document.getElementById("list")
+        elem2.append(elem1)
+        elem.value=""
+    }
+    
+</script>

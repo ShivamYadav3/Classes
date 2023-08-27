@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" onkeyup="debounce()" />
+    <!-- <button onclick="debounce()">submit</button> -->
+  </body>
+</html>
+<script>
+  const companies = [
+    { name: "Company A", id: 1 },
+    { name: "Company B", id: 2 },
+    { name: "Company C", id: 3 },
+    { name: "Company A", id: 4 },
+    { name: "Company B", id: 2 },
+  ];
+
+  const out = {
+    "Company A": 2,
+    "Company B": 1,
+    "Company C": 1,
+  };
+
+  let obj = {};
+  let arr =[]
+  for (let i = 0; i < companies.length; i++) {
+
+    if (Object.keys(obj).includes(companies[i].name) && !arr.includes(companies[i].id)) {
+      obj[companies[i].name]++;
+    } else {
+      obj[companies[i].name] = 1;
+    }
+    arr.push(companies[i].id)
+  }
+  console.log(obj);
+
+  // let arr1 = [2, 3, 4, 5, 6, 7, 8, 5, 4, 2, 1, 5, 4214, 5, 2, 14, 5];
+  // Array.prototype.myFilter = function (cb) {
+  //   let newArr = [];
+  //   for (let i = 0; i < this.length; i++) {
+  //     if (cb(this[i])) newArr.push(this[i]);
+  //   }
+  //   return newArr;
+  // };
+
+  // function isEven(x) {
+  //   return x % 2 === 0;
+  // }
+  // let filteredArr = arr1.myFilter(isEven);
+  // console.log("FilteredArr", filteredArr);
+  let counter = 0;
+  let timer;
+  const debounce = (e) => {    
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      console.log(counter++);
+    }, 300);
+  };
+</script> 
+
+

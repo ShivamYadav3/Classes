@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    .main_card{
+        width: 210px;
+        height: 220px;
+        background-color: aqua;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .yas{
+        width: 190px;
+        border-radius: 5px;
+        margin-top: 5px;
+        border: silver;
+        height: 20px;
+        padding-left: 15px;
+        border: none;
+    }
+    .okk{
+        margin-top: 35px;
+    }
+    .sub{
+        width: 200px;
+        border-radius: 5px;
+        height: 25px;
+        border-color: silver;
+    }
+</style>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    const main= document.getElementById("container")
+    const card=document.createElement("div")
+    card.className="main_card"
+
+    const heading=document.createElement("h1")
+    heading.innerText="Login"
+    card.append(heading)
+    heading.style.textAlign="center"
+
+    const brElem2 =document.createElement("br")
+    card.append(brElem2)
+
+    const label_1 =document.createElement("label")
+    label_1.innerText="Email:"
+    label_1.className="okk"
+    card.append(label_1)
+
+    const input_1=document.createElement("input")
+    input_1.className="yas"
+    input_1.setAttribute("type","email")
+    input_1.placeholder="Enter you Email id"
+    card.append(input_1)
+
+    const brElem =document.createElement("br")
+    card.append(brElem)
+    const brElem1 =document.createElement("br")
+    card.append(brElem1)
+    
+
+    const label_2 =document.createElement("label")
+    label_2.innerText="Password:"
+    label_2.className="okk"
+    card.append(label_2)
+
+    const input_2=document.createElement("input")
+    input_2.className="yas"
+    input_2.setAttribute("type","password")
+    input_2.placeholder="Enter you password"
+    card.append(input_2)
+
+    const brElem4 =document.createElement("br")
+    card.append(brElem4)
+    const brElem5 =document.createElement("br")
+    card.append(brElem5)
+
+    const button=document.createElement("button")
+    button.innerText="Submit"
+    button.className="sub"
+    card.append(button)
+
+    main.append(card)
+</script>
+</html>

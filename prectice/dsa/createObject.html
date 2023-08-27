@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const obj = {
+    firstName: "Jay",
+    lastName: "Pratap",
+    "automobile.make": "Honda",
+    "automobile.model": "Civic",
+    "automobile.revisions.0.miles": 10150,
+    "automobile.revisions.0.code": "REV01",
+    "automobile.revisions.0.changes": "",
+    "automobile.revisions.1.miles": 20021,
+    "automobile.revisions.1.code": "REV02",
+    "automobile.revisions.1.changes.0.type": "asthetic",
+    "automobile.revisions.1.changes.0.desc": "Left tire cap",
+    "automobile.revisions.1.changes.1.type": "mechanic",
+    "automobile.revisions.1.changes.1.desc": "Engine pressure regulator",
+    "visits.0.date": "2015-01-01",
+    "visits.0.dealer": "DEAL-001",
+    "visits.1.date": "2015-03-01",
+    "visits.1.dealer": "DEAL-002",
+  };
+//   const output = {
+//     firstName: "Jay",
+//     lastName: "Pratap",
+//     automobile: {
+//       make: "Honda",
+//       model: "Civic",
+//       revisions: [
+//         {
+//           miles: 10150,
+//           code: "REV01",
+//           changes: "",
+//         },
+//         {
+//           miles: 20021,
+//           code: "REV02",
+//           changes: [
+//             {
+//               type: "asthetic",
+//               desc: "Left tire cap",
+//             },
+//             {
+//               type: "mechanic",
+//               desc: "Engine pressure regulator",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//     visits: [
+//       {
+//         date: "2015-01-01",
+//         dealer: "DEAL-001",
+//       },
+//       {
+//         date: "2015-03-01",
+//         dealer: "DEAL-002",
+//       },
+//     ],
+//   };
+
+
+  let output={}
+  for (const key in obj) {
+    let splitedKey = key.split(".");
+    for (let i = 0; i < splitedKey.length; i++) {
+      if (isNaN(splitedKey[i])) {
+         if(i!==splitedKey.length-1){
+            output[splitedKey[i]]={}
+         }
+      }
+      else{}
+    }
+  }
+  console.log(output)
+</script>

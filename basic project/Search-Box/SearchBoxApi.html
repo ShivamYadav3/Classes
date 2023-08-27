@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchBoxApi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="search_filter()"
+        placeholder="Search according to your need ..."
+      />
+    </div>
+    <div id="container"></div>
+    <div id="cart"></div>
+  </body>
+</html>
+<script>
+  let value = 2;
+  fetch("https://fakestoreapi.com/products")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+
+      let container = document.getElementById("container");
+
+      let fragment = document.createDocumentFragment();
+
+      for (let i = 0; i < data.length; i++) {
+        let item = document.createElement("div");
+        item.className = "item";
+
+        let id = document.createElement("div");
+        id.innerText = data[i].id;
+        id.className = "id";
+        item.append(id);
+
+        let title = document.createElement("div");
+        title.innerText = "Title - " + data[i].title;
+        title.className = "title";
+        item.append(title);
+
+        let image = document.createElement("img");
+        image.src = data[i].image;
+        image.className = "image";
+        item.append(image);
+
+        let price = document.createElement("div");
+        price.innerText = data[i].price;
+        price.className = "price";
+        item.append(price);
+
+        let category = document.createElement("div");
+        category.innerText = "Category - " + data[i].category;
+        category.className = "category";
+        item.append(category);
+
+        let addCart = document.createElement("button");
+        addCart.innerText = "Add cart";
+        addCart.className = "add-to-cart";
+        addCart.setAttribute("onclick", `addToCart(${i})`);
+        item.append(addCart);
+
+        // let description =document.createElement("div");
+        // description.innerText="description - "+data[i].description;
+        // description.className="description";
+        // item.append(description);
+
+        fragment.append(item);
+      }
+      container.append(fragment);
+    });
+  function search_filter() {
+    let inputValue = document.getElementById("myInput").value.toUpperCase();
+    let Checking = document.getElementsByClassName("item");
+    let createArr = [...Checking];
+
+    let arr = createArr.filter((data) => {
+      let txtValue = data.innerText;
+      if (txtValue.toUpperCase().indexOf(inputValue) > -1) {
+        data.style.display = "";
+      } else {
+        data.style.display = "none";
+      }
+    });
+  }
+
+  const addToCart = (i) => {
+    let cartBox = document.getElementById("cart");
+
+    let childCart = document.createElement("div");
+    childCart.className = "childCart";
+    let cartItems = document.createElement("div");
+    cartItems.className = "cartItems";
+    let Title = document.getElementsByClassName("title");
+    cartItems.innerText = Title[i].innerText;
+    childCart.append(cartItems);
+
+    let price = document.createElement("div");
+    let rupee = document.getElementsByClassName("price");
+    price.innerText = rupee[i].innerText;
+    price.className = "upPrice";
+    childCart.append(price);
+
+    let plusButton = document.createElement("button");
+    plusButton.innerText = "plus";
+    plusButton.className = "plusButton";
+    childCart.append(plusButton);
+    plusButton.addEventListener("click", (event) => {
+      let price = document.getElementsByClassName("price")[i].innerText;
+      price = value * price;
+      document.getElementsByClassName("upPrice")[0].innerText = price;
+      document.getElementsByClassName("quantity")[0].innerText = value;
+      value++;
+      console.log(event.target.currentNode=="plusButton")
+    });
+    // childCart.addEventListener("click", (event) => {
+    //   let price = document.getElementsByClassName("price")[i].innerText;
+    //   price = value * price;
+    //   // console.log(event.target.classList.contains("quantity"))
+    //   if(event.target.className==="plusButton"){
+    //     console.log(childCart.children,"tut",document.getElementsByClassName("upPrice"))
+    //   }
+    //   value++;
+    // });
+
+
+    let quantity = document.createElement("div");
+    quantity.innerText = 1;
+    quantity.className = "quantity";
+    childCart.append(quantity);
+
+    let minusButton = document.createElement("button");
+    minusButton.innerText = "minus";
+
+    childCart.append(minusButton);
+   
+
+
+    cartBox.append(childCart);
+  };
+
+  // const plus=()=>{
+  //   let price = document.getElementsByClassName("price")[i].innerText;
+  //   price=value*price
+  //   // function inner(i){
+  //     document.getElementsByClassName("upPrice")[0].innerText=price
+  //     document.getElementsByClassName("quantity")[0].innerText=value
+  //   // }
+  //   // inner()
+  //   console.log(price,value)
+  //   value++
+  //   console.log(value)
+  // }
+  // try parent concept target property
+  // let childCart=document.getElementsByClassName("childCart")
+  // for(let i=0;i<childCart.length;i++){
+  //   childCart[i].addEventListener("click", (event) => {
+  //     let price = document.getElementsByClassName("price")[i].innerText;
+  //     price = value * price;
+  //     console.log(14)
+  //     if(event.target.className==="plusButton"){
+  //       console.log(childCart.children,"tut",document.getElementsByClassName("upPrice")[i])
+  //     }
+  //     value++;
+  //   });
+  // }
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .right-side {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        #menu_bar {
+            display: none;
+        }
+        .okk{
+            background: #eb5d1f;
+            border:1px solid #eb5d1f;
+            padding:8px 15px;
+            color: #fff;
+            border-radius: 50px;
+        }
+        @media (max-width: 1068px) {
+            .right-side {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                position: absolute;
+                right: 24px;
+                top: 66px;
+            }
+            #menu_bar {
+                display: block;
+                margin-top: 22px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            .right-side-media {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-section header-section-2">
+        <div class="left-side">
+            <img src="https://vidhyaskillschool.com/assets/img/logo_v2.webp" alt="" style="width: 80px;">
+        </div>
+        <div class="right-side right-side-media">
+            <div class="navbar">Home</div>
+            <div class="navbar">Curriculum</div>
+            <div class="navbar">Faq</div>
+            <div class="navbar">About Us</div>
+            <div class="navbar">Contact Us</div>
+            <div class="navbar">Blogs</div>
+            <div class="navbar okk">Cohort 9 | Tap to Apply </div>
+            <div class="navbar okk">Apply to Cohort 9</div>
+            <div class="navbar okk">Hire From Us</div>
+        </div>
+        <i id="menu_bar" onclick="shn()" class="fa-solid fa-bars"></i>
+    </header>
+    <script>
+        function shn() {
+            let nav_content = document.getElementsByClassName("right-side")[0];
+            nav_content.classList.toggle("right-side-media")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str = "hello mam what are you noon anakana doing naman";
+  function largestPalindrome(str) {
+    let str1 = str.split(" ");
+    let arr = [];
+    let final = "";
+    for (let i = 0; i < str1.length; i++) {
+      let word = "";
+      let str2 = str1[i];
+      for (let j = str2.length - 1; j >= 0; j--) {
+        word += str2[j];
+      }
+      if (str2 === word) {
+        arr.push(word);
+      }
+    }
+    for (let k = 0; k < arr.length; k++) {
+      if (arr[k].length > final.length) {
+        final = arr[k];
+      }
+    }
+    return final;
+  }
+  console.log(largestPalindrome(str));
+</script>

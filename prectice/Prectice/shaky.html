@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // let obj = {
+  //   a: 485,
+  //   b: 504,
+  //   c: 895,
+  //   d: 597,
+  //   h: 845,
+  //   z: 506,
+  // };
+  // let highest = 0;
+  // let higestKey = null;
+  // for (let i in obj) {
+  //   if (obj[i] > highest) {
+  //     highest = obj[i];
+  //     higestKey = i;
+  //   }
+  // }
+  // console.log(higestKey, highest);
+
+  let str = "hello";
+  let final = "";
+  let length = str.length;
+  const Reverse = (str) => {
+    if (length > 0) {
+      final += str[length - 1];
+      length--;
+      Reverse(str);
+    }
+
+    return final;
+  };
+  console.log(Reverse(str));
+
+  // let str="hello"   //reverse through recursion
+  function shn(str) {
+    if (str.length === 0) return "";
+    console.log(str, "str");
+
+    return str[str.length - 1] + shn(str.slice(0, str.length - 1));
+  }
+  console.log(shn(str));
+</script>

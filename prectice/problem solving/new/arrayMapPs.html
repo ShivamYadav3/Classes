@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const inputOne = [
+    {
+      name: "John",
+      age: 13,
+    },
+    {
+      name: "Mark",
+      age: 56,
+    },
+    {
+      name: "Rachel",
+      age: 45,
+    },
+    {
+      name: "Nate",
+      age: 67,
+    },
+    {
+      name: "Jeniffer",
+      age: 65,
+    },
+  ];
+  let arr1 = [];
+  let result = inputOne.filter((data) => {
+    if (data.age > 60) {
+      arr1.push(data.age);
+    }
+  });
+  console.log(arr1);
+
+  // Output - [ 67, 65]; - Age > 60
+
+  // prob - 2
+
+  // step 1 - split
+  // step 2 - if Array.length>3  so step 3
+  // step 3 - [o]index+Array.length-2+index[Array.length-1]
+  // step 3.1 - join
+  // step 4 - else arr[]
+  // step 4 - join
+
+  const inputTwo = "Every developer likes to mix kubernetes and javascript";
+  let okk = [];
+  let arr = inputTwo.split(" ").map((data) => {
+    if (data.length > 3) {
+      let final =
+        data.charAt(0) + (data.length - 2) + data.charAt(data.length - 1);
+      okk.push(final);
+    } else {
+      let final2 = data;
+      okk.push(final2);
+    }
+  });
+  let namee = okk.join(" ");
+  console.log("Output => ", namee);
+  // Output - "E3y d7r l3s to mix k8s and j8t";
+
+  // prob 3
+
+  const inputThree = [
+    {
+      username: "john",
+      team: "red",
+      score: 5,
+      items: ["ball", "book", "pen"],
+    },
+    {
+      username: "becky",
+      team: "blue",
+      score: 10,
+      items: ["tape", "backpack", "pen"],
+    },
+    {
+      username: "susy",
+      team: "red",
+      score: 55,
+      items: ["ball", "eraser", "pen"],
+    },
+    {
+      username: "tyson",
+      team: "green",
+      score: 1,
+      items: ["book", "pen"],
+    },
+  ];
+
+  let arr2 = [];
+  let resultsV2 = inputThree.filter((data) =>
+    arr2.push(
+      "Hello " + data.username.charAt(0).toUpperCase() + data.username.slice(1)
+    )
+  );
+  console.log(arr2);
+
+  let arr3 = [];
+  let resultsV3 = inputThree.filter((data) => arr3.push(data.username.length));
+  console.log(arr3);
+
+  let arr4 = [];
+  let resultsV4 = inputThree.filter((data) => arr4.push(data.items.length));
+  console.log(arr4);
+
+  let arr5 = [];
+  let resultsV5 = inputThree.filter((data) =>
+    arr5.push(
+      "Hello " +
+        data.username.charAt(0).toUpperCase() +
+        data.username.slice(1) +
+        " from " +
+        data.team
+    )
+  );
+  console.log(arr5);
+
+  let resultsV6 = inputThree.filter((data) => data.score === 55);
+  console.log(resultsV6);
+
+  let arr6 = [];
+  let final = 0;
+  let resultsV7 = inputThree.filter((data) => {
+    return (final += data.score);
+  });
+  arr6.push(final);
+  console.log(arr6);
+
+  // - Output 1 - ['Hello John', 'Hello Becky', 'Hello Susy', 'Hello Tyson']
+  // - Output 2 - [4,5,4,5] -> username length
+  // - Output 3 - [3,3,3,3] - team length
+  // - Output 4 - ['Hello John from Red', 'Hello Becky from Blue', 'Hello Susy from Red', 'Hello Tyson from Green']
+  // - Output 5 - [{ username: "susy", team: "red", score: 55, items: ["ball", "eraser", "pen"]}]
+  // - Output 6 - [71] - count of score
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Remove Duplicate characters from String
+
+  // algo=>
+  // 1) take a string and lowercase it 
+  // 2) split to the string
+  // 3) take a blank array
+  // 4) run a loop in split str
+  // 5) check the array if array not includes the word so push that word in to array 
+  // 6) join to the array
+
+  
+  let str = "satyam";
+  let arr = [];
+  const duplicateCharacter = (str) => {
+    let splitStr = str.toLowerCase().split("");
+    for (let i = 0; i < splitStr.length; i++) {
+      if (!arr.includes(splitStr[i])) {
+        arr.push(splitStr[i]);
+      }
+    }
+    let output = arr.join("");
+    return output;
+  };
+  console.log(duplicateCharacter(str));
+</script>

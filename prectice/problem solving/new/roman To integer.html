@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  var romanToInt = function (s) {
+    const obj = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+    let result = 0;
+    for (let i = 0; i < s.length; i++) {
+      let current = obj[s[i]];
+      let next = obj[s[i + 1]];
+      if (next && current < next) {
+        result += next - current;
+        i++;
+      } else {
+        result += current;
+      }
+    }
+    return result;
+  };
+  console.log(romanToInt("III"));
+
+  var intToRoman = (num) => {
+    const one = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const ten = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+    const hun = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+    const tho = ["", "M", "MM", "MMM"];
+
+    return (
+      tho[Math.floor(num / 1000)] +
+      hun[Math.floor((num % 1000) / 100)] +
+      ten[Math.floor((num % 100) / 10)] +
+      one[num % 10]
+    );
+  };
+//   2880  mmdxlvi
+console.log(intToRoman(2880),"MMDCCCLXXX")
+</script>

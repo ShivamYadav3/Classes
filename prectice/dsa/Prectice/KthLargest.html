@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  var findKthLargest = function (nums, k) {
+    let obj = {};
+    for (let i = 0; i < nums.length; i++) {
+      if (obj.hasOwnProperty(nums[i])) {
+        obj[nums[i]] = obj[nums[i]] + 1;
+      } else {
+        obj[nums[i]] = 1;
+      }
+    }
+    console.log(obj);
+    let arr1 = Object.values(obj);
+    let okk = 0;
+    let index;
+    for (let i = arr1.length - 1; i >= 0; i--) {
+      okk += arr1[i];
+      if (okk == k) {
+          console.log("okk",okk)
+
+        index = i;
+        break;
+      }
+      if(okk>k){
+       index=i
+       break
+      }
+    }
+    let arr2 = Object.keys(obj);
+    console.log(arr2, arr1, index);
+    return arr2[index];
+  };
+
+  findKthLargest([99,99], 1);
+</script>

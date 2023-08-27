@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function sum(){
+        let sum=0;
+        for(let i=0; i<arguments.length; i++){
+            sum+=arguments[i]
+        }
+        return sum
+    }
+    console.log(sum(8,5,8,5))
+
+    let sum1 =(...shiv)=>{
+        let sum=0;
+        for(let i=0; i<shiv.length; i++){
+            sum+=shiv[i]
+        }
+        return sum
+    }
+    console.log(sum1(18,5,8,5))
+
+    let okk =(input1,input2)=>{
+        return input1.hasOwnProperty(input2)
+    }
+     let obj ={
+        name: "shivam",
+        age:24
+     }
+     console.log(okk(obj, "name"))
+     console.log(okk(obj, "nam"))
+     console.log(okk(obj, "age"))
+    //  let okk2 =(input1, input2)=>{
+    //     return let okkk ={
+    //         name: "input1",
+    //         age: 24
+    //     }
+    //  }
+
+    function user (name, age, height){
+        return{name, age, height}
+    }
+    let abc= user("shivam", 24, 5.10)
+    console.log(abc) 
+
+
+     
+    
+</script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //Input: haystack = "sadbutsad", needle = "sad"
+
+    let haystack="sadbutsad"
+    let needle="sad"
+
+    for(let i=0;i<haystack.length;i++){
+        for(let i=0;i<needle.length;i++){
+            if(!haystack[i]===needle[i]){
+                break
+            }
+        }
+    }
+
+
+//     var strStr = function(haystack, needle) {
+// if (needle.length > haystack.length) {
+//       return -1;
+//     }
+    
+//     for (let i = 0; i <= haystack.length - needle.length; i++) {
+//       let found = true;
+//       for (let j = 0; j < needle.length; j++) {
+//         if (haystack[i + j] !== needle[j]) {
+//           found = false;
+//           break;
+//         }
+//       }
+//       if (found) {
+//         return i;
+//       }
+//     }
+    
+//     return -1;
+// };
+
+
+
+
+
+</script>
+
+
+
+
+<!-- /**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+var strStr = function (haystack, needle) {
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] !== needle[0]) {
+      continue;
+    }
+
+    let matchCount = 0;
+    for (let j = 0; j < needle.length; j++) {
+      if (haystack[i + j] !== needle[j]) {
+        break;
+      }
+
+      matchCount++;
+    }
+
+    if (matchCount === needle.length) {
+      return i;
+    }
+  }
+
+  return -1;
+}; -->

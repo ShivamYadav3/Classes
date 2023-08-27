@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let obj={
+    name:"shankar",
+    age:20,
+    lname:"sahu",
+    nes:{
+        need:"need to change by deep copy"
+    }
+   
+}
+let chnge = JSON.parse(JSON.stringify(obj))
+chnge.nes.need="hiiii"
+console.log(obj)
+console.log(chnge)
+
+let ass = Object.assign({},obj)
+ass.name ="shivam"
+ass.nes.need="hiiii"
+console.log(ass)
+</script>

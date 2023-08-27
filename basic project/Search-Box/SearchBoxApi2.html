@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchBoxApi2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="search_filter()"
+        placeholder="Search according to your need ..."
+      />
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  fetch("https://fakestoreapi.com/products")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+
+      let container = document.getElementById("container");
+
+      let fregment = document.createDocumentFragment();
+
+      let some=data.map((acc)=> {
+        let item = document.createElement("div");
+        item.className = "item";
+
+        let id = document.createElement("div");
+        id.innerText = acc[i].id;
+        id.className = "id";
+        item.append(id);
+
+        let title = document.createElement("div");
+        title.innerText = "Title - " + acc[i].title;
+        title.className = "title";
+        item.append(title);
+
+        let image = document.createElement("img");
+        image.src = acc[i].image;
+        image.className = "image";
+        item.append(image);
+
+        let price = document.createElement("div");
+        price.innerText = "price - " + acc[i].price;
+        price.className = "price";
+        item.append(price);
+
+        let category = document.createElement("div");
+        category.innerText = "Category - " + acc[i].category;
+        category.className = "category";
+        item.append(category);
+
+        // let description =document.createElement("div");
+        // description.innerText="description - "+acc[i].description;
+        // description.className="description";
+        // item.append(description);
+
+        fregment.append(item);
+      })
+      container.append(fregment);
+    });
+  function search_filter() {
+    let inputValue = document.getElementById("myInput").value.toUpperCase();
+    let Checking = document.getElementsByClassName("item");
+
+    let arr = [...Checking].filter((data) => {
+        let txtValue = data.innerText;
+        if (txtValue.toUpperCase().indexOf(inputValue) > -1) {
+          data.style.display = "";
+        } else {
+          data.style.display = "none";
+        }
+    });
+  }
+</script>

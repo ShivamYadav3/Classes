@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // algo
+  // 1) run a loop which start from 0 or 1 for the counting and up to (ask from the interviewer)
+  // 2) run a nested loop up to arr length
+  // 3) subtract and add the first loop i to given num
+  // 4) check the condition that the value exist in the arr or not
+  // 5) if we get the value so print the value
+
+  function closestNum(arr, num) {
+    let out1;
+    let out2;
+    for (let i = 1; i < Infinity; i++) {
+      for (let j = 0; j < arr.length; j++) {
+        out1 = num - i;
+        out2 = num + i;
+        if (arr.includes(out1)) {
+          return out1;
+        } else if (arr.includes(out2)) {
+          return out2;
+        }
+      }
+    }
+  }
+  console.log(closestNum([1, 10, 7, 2, 4, 9], 5));
+
+</script>

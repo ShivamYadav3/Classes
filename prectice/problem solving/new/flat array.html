@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // const arr = [1, 2, 3, 4, 5, 6, [1, 2, [5, 5, 8, 8, [9, "ok", 0]], 3], 7];
+  // console.log(arr.flat(10))
+  // const arr2 = [];
+  // const flatArray = (arr) => {
+  //   for (let i = 0; i < arr.length; i++) {
+  //     if (Array.isArray(arr[i])) {
+  //       flatArray(arr[i]);
+  //     } else {
+  //       arr2.push(arr[i]);
+  //     }
+  //   }
+  //   return arr2;
+  // };
+  // console.log(flatArray(arr));
+
+  const arr3 = [
+    ["a", "b", [8, 8]],
+    ["c", "d"],
+    ["e", "f"],
+  ];
+  const arr4 = [].concat(...arr3);
+  console.log(arr4,"nor");
+
+  const Flat = arr3.reduce((data, okk) => data.concat(...okk), []);
+  console.log("sp",Flat);
+
+  console.log(arr3.flat(5),"fl");
+</script>

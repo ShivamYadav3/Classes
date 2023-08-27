@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+</html>
+<script>
+    var topKFrequent = function(nums, k) {
+        let obj ={}
+        let arr=[]
+        let count =0
+    for(let i=0;i<nums.length;i++){
+        if(obj.hasOwnProperty(nums[i])){
+            obj[nums[i]]=(obj[nums[i]])+1
+        }
+        else{
+            obj[nums[i]]=1
+        }
+    }
+    for(let x in obj){
+        if(obj[x]>=k){
+            arr.push(x)
+        }
+    }
+    for(let x in obj){
+        if(!arr.includes(x)){
+            arr.push(x)
+            count++
+        }
+    }
+    return arr.splice(arr.length-1,k)
+};
+console.log(topKFrequent([1],1))// not solved
+
+// https://leetcode.com/problems/top-k-frequent-elements/
+</script>
